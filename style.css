@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Segoe+UI:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fff0f5, #ffe6f2, #ffffff);
+  color: #4a2c3a;
+  text-align: center;
+}
+
+/* CONTAINER */
+.container {
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* 🎀 TÍTULOS PRINCIPAIS */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #ff4d88, #ff99c8, #d63384);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #d63384;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* linha decorativa nos títulos */
+h2::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff4d88, #ff99c8);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
+}
+
+/* 📦 CARDS */
+.card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #ffc2dd;
+  border-radius: 22px;
+  padding: 18px;
+  margin: 14px 0;
+  box-shadow: 0 10px 25px rgba(255, 105, 180, 0.12);
+  backdrop-filter: blur(8px);
+  transition: 0.35s ease;
+  font-size: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 105, 180, 0.25);
+}
+
+/* 💖 BOTÕES */
+button {
+  background: linear-gradient(90deg, #ff4d88, #ff99c8);
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  margin-top: 18px;
+  cursor: pointer;
+  border-radius: 35px;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.25);
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.06);
+  box-shadow: 0 15px 30px rgba(255, 105, 180, 0.35);
+}
+
+/* ✍️ INPUTS */
+input, textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px;
+  border: 1px solid #ffc2dd;
+  border-radius: 15px;
+  background: #fff;
+  color: #4a2c3a;
+  outline: none;
+  font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #ff80aa;
+}
+
+/* 💎 EFEITO SUAVE GERAL */
+* {
+  transition: all 0.2s ease;
+}

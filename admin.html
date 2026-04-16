@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin - Mensagens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>🔐 Mensagens Recebidas</h2>
+  <div id="lista"></div>
+</div>
+
+<script>
+const dbURL = "https://graduacao-fatima-default-rtdb.firebaseio.com/mensagens.json";
+
+fetch(dbURL)
+  .then(res => res.json())
+  .then(data => {
+    const lista = document.getElementById("lista");
+
+    for (let id in data) {
+      const msg = data[id];
+
+      lista.innerHTML += `
+        <div class="card">
+          <b>${msg.nome}</b>
+          <p>${msg.mensagem}</p>
+          <small>${msg.data}</small>
+        </div>
+      `;
+    }
+  });
+</script>
+
+</body>
+</html>
